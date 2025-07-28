@@ -13,24 +13,36 @@ html {
 
 .keys {
   display: flex;
-  flex: 1;
+  flex-wrap: wrap;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
 .key {
+  width: 20vw;
+  max-width: 8rem;
+  margin: 0.5rem;
+  padding: 1rem 0.5rem;
   border: 0.4rem solid black;
   border-radius: 0.5rem;
-  margin: 1rem;
   font-size: 1.5rem;
-  padding: 1rem 0.5rem;
   transition: all 0.07s ease;
-  width: 10rem;
   text-align: center;
   color: white;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   text-shadow: 0 0 0.5rem black;
+  user-select: none;
+}
+
+@media (max-width: 480px) {
+  .key kbd {
+    font-size: 3rem;
+  }
+  .key {
+    font-size: 1.2rem;
+    padding: 0.8rem 0.4rem;
+  }
 }
 
 .playing {
